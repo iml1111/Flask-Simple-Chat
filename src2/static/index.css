@@ -1,0 +1,32 @@
+html, body { 
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%
+}
+.chat-container {
+  position: relative; 
+  height: 350px;
+  padding: 2px;
+}
+.scroll-wrapper { 
+  position: relative; 
+  height: 100%; 
+  box-sizing: border-box; 
+  border: 1px solid darkgrey;
+  overflow-y: scroll;
+}
+.chat-msg-list { 
+  position: absolute; 
+  bottom: 0; 
+  margin: 0;
+  list-style: none; 
+  padding: 1px; 
+  width: 100%; 
+  max-height: 100%; 
+  box-sizing: border-box; 
+}
+.chat-msg-item { 
+  padding: 3px 3px; 
+  overflow-wrap: break-word;
+}

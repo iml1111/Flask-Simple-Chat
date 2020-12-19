@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Socket App</title>
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.10.4/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="chat-container">
+        <div class="scroll-wrapper">
+          <ul class="chat-msg-list"></ul>
+        </div>
+        <div class="chat-msg-controller">
+          <form id="message_form">
+            <input type="text" name="message" placeholder="message">
+            <button type="submit">send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
