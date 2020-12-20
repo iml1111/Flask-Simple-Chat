@@ -1,14 +1,17 @@
 <html>
     <head>
-        <title>IML-SocketIO-Chat</title>
+        <title>Flask-Simple-Chat</title>
     </head>
     <body>
-        <h1>IML-SocketIO-Chat</h1>
-        <form method="POST">
-            {{ form.hidden_tag() }}
-            {{ form.name.label }}: {{ form.name() }} {% for error in form.name.errors %}{{ error }}{% endfor %}<br>
-            {{ form.room.label }}: {{ form.room() }} {% for error in form.room.errors %}{{ error }}{% endfor %}<br>
-            {{ form.submit() }}
-        </form>
+        <h1>Flask-Simple-Chat</h1>
+        <h3>edited by IML</h3>
+        - 입장하기 위해 닉네임, 방이름을 입력해주세요. <br>
+        - 이미 해당 방이 세션에 존재할 경우, 그 곳으로 입장하며, 없을 경우 새로 생성합니다. <br>
+        <form action = "http://localhost:5000" method = "POST">
+         <p>닉네임 <input type = "text" name = "name" /></p>
+         <p>방이름 <input type = "text" name = "room" /></p>
+         <p><input type = "submit" value = "입장하기" /></p>
+      </form>
+
     </body>
 </html>
