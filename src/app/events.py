@@ -46,4 +46,3 @@ def socketio_init(socketio):
         room = session.get('room')
         leave_room(room)
         emit('status', {'msg': session.get('name') + '님이 퇴장하셨습니다'}, room=room)
-
